@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    int n, n5, n4, n3, n2, n1, np;
+    printf("Enter a 5 digit number:");
+    scanf("%d", &np);
+
+    n = np;          // start with full number
+    n = n / 10;      // drop last digit
+    n1 = np - n * 10; // last digit
+
+    np = n;          // now work with reduced number
+    n = np / 10;
+    n2 = np - n * 10;
+
+    np = n;
+    n = np / 10;
+    n3 = np - n * 10;
+
+    np = n;
+    n = np / 10;
+    n4 = np - n * 10;
+
+    np = n;
+    n = np / 10;
+    n5 = np - n * 10;
+
+    printf("Reversed number is: %d%d%d%d%d", n1, n2, n3, n4, n5);
+    return 0;
+}
